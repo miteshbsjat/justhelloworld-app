@@ -1,0 +1,13 @@
+{
+  "name": "justhelloworld",
+  "version": "1.0.0",
+  "description": "Node.js and Express on Docker",
+  "author": "Mitesh Singh Jat <mitesh.singh.jat@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
