@@ -11,7 +11,7 @@ node {
      }
    }
    stage('Upload Image to DockerHub') {
-            withCredentials([string(credentialsId: 'miteshsjat', variable: 'dhpass')]) {
+            withCredentials([string(credentialsId: 'miteshsjatp', variable: 'dhpass')]) {
     sh "docker login -u miteshsjat -p ${dhpass} && docker push miteshsjat/docker-excample:${commit_id}"
             }
   }
