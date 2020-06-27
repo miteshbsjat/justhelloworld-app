@@ -10,9 +10,9 @@ node {
        sh 'npm install'
      }
    }
-   stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v1/', 'miteshsjat') {
-       def app = docker.build("miteshsjat/docker-excample:${commit_id}", '.').push()
-     }
-   }
+   stage('Upload Image to DockerHub') {
+            withCredentials([string(credentialsId: 'miteshsjat', variable: 'dhpass')]) {
+    sh "docker login -u miteshsjat -p ${dhpass} && docker push miteshsjat/docker-excample:${commit_id}"
+            }
+  }
 }
