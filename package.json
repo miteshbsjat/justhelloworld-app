@@ -5,9 +5,18 @@
   "author": "Mitesh Singh Jat <mitesh.singh.jat@gmail.com>",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "npm install inherits && mocha"
   },
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "http-errors": "^1.7.0",
+    "mysql": "^2.10.2"
+
+  },
+  "devDependencies": {
+    "inherits": "^2.0.3",
+    "mocha": "^5.2.0",
+    "ms": "^2.1.1"
   }
 }
